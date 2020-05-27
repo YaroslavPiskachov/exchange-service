@@ -1,0 +1,19 @@
+version: '3.1'
+services:
+  postgresql:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=exchange
+
+  app:
+    container_name: exchange-service
+    image: exchange-service
+    build: ./
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgresql
