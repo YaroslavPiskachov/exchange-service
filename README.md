@@ -5,7 +5,7 @@
 4. run application with command “docker-compose up --build”
 5. for testing you can use my postman collection https://www.getpostman.com/collections/c2bcf2cf4b1401b9b7b6
 
-##Security:
+## Security:
 
 Application is secured by session stateless basic authentication with 2 default users created in system with credentials below:
 
